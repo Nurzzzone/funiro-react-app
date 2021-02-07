@@ -1,0 +1,109 @@
+.btn {
+  @include font-rule(Gilroy, 400);
+  background-color: transparent;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  display: block;
+  text-align: center;
+  @include autoprefixer(transition, all .3s ease-in-out);
+
+  &-main {
+    color: #ffffff;
+    background-color: #e89f71;
+    padding: 24px 0px;
+
+    @media (max-width: 425px) {
+      font-size: 14px;
+      padding: 12px 0px;
+    }
+
+    &:hover {
+      background-color: darken(#e89f71, 5%);
+    }
+
+    &:active {
+      @include autoprefixer(transform, translateY(2px));
+    }
+  }
+
+  &-outline {
+    @include font-medium(16px,#e89f71);
+    background-color: transparent;
+    border: 1px solid #e89f71;
+    padding: 12px 80px;
+
+    &:hover {
+      background-color: #e89f71;
+      color: #ffffff;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 20px;
+      padding: 18px 80px;
+    }
+  }
+
+  &-add {
+    &:disabled {
+      background-color: darken(#ffffff, 20%);
+      color: #aeaeae;
+    }
+  }
+}
+
+.burger {
+  display: none;
+
+  @media screen and (max-width: 768px) {
+    display: block;
+    width: 40px;
+    height: 40px;
+    z-index: 100;
+    cursor: pointer;
+    order: -1;
+  
+    &__wrapper {
+      background-color: transparent;
+      height: 100%;
+      @include flex-rule(between, center);
+      -ms-flex-direction: column;
+      flex-direction: column;
+      padding: 9px 0;
+  
+      span {
+        display: inline-block;
+        width: 30px;
+        height: 4px;
+        background-color: #3a3a3a;
+      }
+    }
+  }
+}
+
+.scroll-to-top {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 200;
+  background-color: #e89f71;
+  @include flex-rule(center, center);
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border: 1px solid transparent;
+  visibility: hidden;
+  opacity: 0;
+
+  &--active {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  svg {
+    @include autoprefixer(transform, rotate(-180deg));
+    margin-top: -2px;
+  }
+}

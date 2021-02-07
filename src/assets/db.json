@@ -1,0 +1,34 @@
+{
+  "products": [
+    {
+      "id": 0,
+      "title": "Syltherine",
+      "description": "Stylish cafe chair",
+      "price": 2500000,
+      "sale": "-30%",
+      "new": false
+    },
+    {
+      "id": 1,
+      "title": "Leviosa",
+      "description": "Stylish cafe chair",
+      "price": 2500000,
+      "new": true
+    },
+    {
+      "id": 2,
+      "title": "Lolito",
+      "description": "Luxury big sofa",
+      "price": 7000000,
+      "sale": "-50%",
+      "new": false
+    },
+    {
+      "id": 3,
+      "title": "Respira",
+      "description": "Minimalist fan",
+      "price": 500000,
+      "new": true
+    }
+  ]
+}

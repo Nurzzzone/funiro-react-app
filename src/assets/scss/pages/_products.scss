@@ -1,0 +1,8 @@
+.products-page {
+  margin-top: 150px;
+  margin-bottom: 80px;
+
+  &__content {
+    @include flex-rule(0, 0);
+  }
+}

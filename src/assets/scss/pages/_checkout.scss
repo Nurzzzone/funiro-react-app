@@ -1,0 +1,15 @@
+.checkout {
+  margin-top: 150px;
+  margin-bottom: 80px;
+
+  &-empty {
+    padding: 170px 0 100px;
+    @include flex-rule(center, center);
+    flex-direction: column;
+
+    &__title {
+      @include font-medium(24px, #b1b0b0);
+      margin-bottom: 80px;
+    }
+  }
+}
